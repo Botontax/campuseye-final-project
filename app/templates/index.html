@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusEye</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>CampusEye</h1>
+        <h2>智慧教室人流分析與預測平台</h2>
+
+        <div class="info">
+            <p>教室：{{ classroom }}</p>
+            <p>目前人數：{{ people_count }} 人</p>
+            <p>狀態：{{ status }}</p>
+        </div>
+
+        <p class="note">系統每 5 秒自動更新一次</p>
+    </div>
+</body>
+</html>
