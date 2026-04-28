@@ -1,18 +1,18 @@
 from flask import Flask, render_template
-import json
+from database.db import read_data
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    with open("data.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = read_data()
 
     return render_template(
         "index.html",
         classroom=data["classroom"],
         people_count=data["people_count"],
-        status=data["status"]
+        status=data["status"],
+        reason=data.get("reason", "尚無資料")
     )
 
 if __name__ == "__main__":
